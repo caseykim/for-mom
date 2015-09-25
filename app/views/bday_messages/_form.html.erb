@@ -1,0 +1,13 @@
+<%= form_for @bday_message do |f| %>
+  <%= f.label :name, "Name (이름)"%>
+  <%= f.text_field :name %>
+
+  <%= f.label :body, "Message (메세지)" %>
+  <%= f.text_field :body %>
+
+  <%= f.label :password, "4 digits PIN to edit/delete your message (4자리 비밀번호)" %>
+  <%= f.password_field :password, maxlength: 4 %>
+
+  <%= f.submit "Submit 완료", class: "button right" %>
+  <%= link_to "Back", :back, class: "secondary button right" %>
+<% end %>
