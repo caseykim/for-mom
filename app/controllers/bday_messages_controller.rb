@@ -1,7 +1,6 @@
 class BdayMessagesController < ApplicationController
   def index
     @bday_messages = BdayMessage.all
-    flash.delete(:alert)
   end
 
   def new
@@ -41,8 +40,14 @@ class BdayMessagesController < ApplicationController
   end
 
   def destroy
-    BdayMessage.find(params[:id]).destroy
-    flash[:success] = 'Message deleted.'
+    message = BdayMessage.find(params[:id])
+    password = message.password
+    if password == password_entered
+      message.destroy
+      flash[:success] = 'Message deleted.'
+    else
+      flash[:alert] = "Wrong password. 비밀번호가 일치하지않습니다."
+    end
     redirect_to bday_messages_path
   end
 
