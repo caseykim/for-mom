@@ -6,31 +6,34 @@
           <fieldset class="content">
             <legend><%= message.name %><%= image_tag('/red.png', class: "heart") %></legend>
             <%= message.body %>
-            <button data-remote="true" class="tiny secondary button right button-delete-form">Delete (삭제)</button>
-            <button data-remote="true" class="tiny button right button-edit-form">Edit (수정)</button>
-            <div class="hide deleteform">
-              <%= form_for message, method: :delete do |f| %>
-                <%= f.label :password, "4 digits PIN to delete your message (4자리 비밀번호)" %>
-                <%= f.password_field :password, maxlength: 4 %>
+            <div class="row">
+              <button data-remote="true" class="tiny secondary button right button-delete-form">Delete (삭제)</button>
+              <button data-remote="true" class="tiny button right button-edit-form">Edit (수정)</button>
+              <div class="small-10 columns right">
+                <div class="hide deleteform">
+                  <%= form_for message, method: :delete do |f| %>
+                    <%= f.label :password, "4 digits PIN to delete your message (4자리 비밀번호)" %>
+                    <%= f.password_field :password, maxlength: 4 %>
 
-                <%= f.submit "Delete 삭제", class: "tiny button right" %>
-              <% end %>
+                    <%= f.submit "Delete 삭제", class: "tiny button right" %>
+                  <% end %>
+                </div>
+                <div class="hide editform">
+                  <%= form_for message do |f| %>
+                    <%= f.label :name, "Name (이름)"%>
+                    <%= f.text_field :name %>
+
+                    <%= f.label :body, "Message (메세지)" %>
+                    <%= f.text_field :body %>
+
+                    <%= f.label :password, "4 digits PIN to edit your message (4자리 비밀번호)" %>
+                    <%= f.password_field :password, maxlength: 4 %>
+
+                    <%= f.submit "Edit 수정", class: "tiny button right" %>
+                  <% end %>
+                </div>
+              </div>
             </div>
-            <div class="hide editform">
-              <%= form_for message do |f| %>
-                <%= f.label :name, "Name (이름)"%>
-                <%= f.text_field :name %>
-
-                <%= f.label :body, "Message (메세지)" %>
-                <%= f.text_field :body %>
-
-                <%= f.label :password, "4 digits PIN to edit your message (4자리 비밀번호)" %>
-                <%= f.password_field :password, maxlength: 4 %>
-
-                <%= f.submit "Submit 완료", class: "tiny button right" %>
-              <% end %>
-            </div>
-            </p>
           </fieldset>
         <% end %>
       </ul>

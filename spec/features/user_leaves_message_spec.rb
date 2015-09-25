@@ -11,7 +11,7 @@ feature 'User leaves a message', %(
     fill_in 'Name', with: "Kelly"
     fill_in 'Message', with: "banana"
     fill_in 'bday_message_password', with: "0000"
-    click_button 'Add'
+    click_button 'Submit 완료'
 
     expect(page).to have_content('Your message has been posted. Thank you!')
     expect(page).to have_content("banana")
