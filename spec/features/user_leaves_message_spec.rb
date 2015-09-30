@@ -6,6 +6,9 @@ feature 'User leaves a message', %(
   So that Sojin can read them
 ) do
 
+  before do
+    FactoryGirl.create(:bday_message)
+  end
   scenario 'user creates a message' do
     visit new_bday_message_path
     fill_in 'Name', with: "Kelly"
@@ -18,15 +21,41 @@ feature 'User leaves a message', %(
     expect(page).to have_content("Kelly")
   end
 
-  xscenario 'user edits a message' do
+  scenario 'user edits a message' do
+    visit bday_messages_path
+    click_button 'Edit (수정)'
+    within('.editform') do
+      fill_in 'Name', with: "Kind Alum"
+      fill_in 'bday_message_password', with: "0000"
+      click_button 'Edit 수정'
+    end
 
+    expect(page).to have_content('Message updated.')
+    expect(page).to have_content('Kind Alum')
   end
 
-  xscenario 'user deletes a message' do
+  scenario 'user deletes a message' do
+    visit bday_messages_path
+    expect(page).to have_css('fieldset.content', count: 1)
 
+    click_button 'Delete (삭제)'
+    within('.deleteform') do
+      fill_in 'bday_message_password', with: "0000"
+      click_button 'Delete 삭제'
+    end
+
+    expect(page).to have_content('Message deleted.')
+    expect(page).to have_css('fieldset.content', count: 0)
   end
 
-  xscenario 'user cannot change message without password' do
+  scenario 'user cannot change message without password' do
+    visit bday_messages_path
+    click_button 'Edit (수정)'
+    within('.editform') do
+      fill_in 'Name', with: "Bad Alum"
+      click_button 'Edit 수정'
+    end
 
+    expect(page).to have_content('Wrong password.')
   end
 end
