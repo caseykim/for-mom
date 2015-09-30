@@ -1,0 +1,97 @@
+/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+/* line 18, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+body {
+  font-family: 'Nanum Gothic', serif;
+  background: url("/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #e9dbc6;
+}
+
+/* line 25, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+section {
+  padding: 20px;
+}
+
+/* line 29, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.main {
+  padding-top: 30px;
+  margin: auto;
+  width: 80%;
+}
+
+/* line 35, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.content {
+  padding-top: 30px;
+}
+
+/* line 39, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.heart {
+  width: 20px;
+  height: 20px;
+}
+
+/* line 44, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.slide-image {
+  width: 100%;
+}
+
+/* line 48, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.wishlist {
+  margin: auto;
+}
+/* line 50, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.wishlist table {
+  width: 100%;
+  background: rgba(241, 236, 227, 0.71);
+}
+/* line 54, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.wishlist .button {
+  width: 50%;
+  height: 50px;
+}
+
+/* line 60, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.gift-form {
+  margin: auto;
+  align-self: center;
+  padding-top: 20px;
+  width: 70%;
+}
+
+/* line 68, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+.most-wanted td {
+  background-color: rgba(251, 151, 178, 0.63);
+}
+
+/* line 73, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+fieldset {
+  padding: 0px 10px 5px 10px;
+  border-width: 1.5px;
+  border-color: #474b50;
+}
+
+/* line 79, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+fieldset p {
+  margin: 0;
+}
+
+/* line 83, /Users/caseykim/projects/for-mom/app/assets/stylesheets/application.scss */
+fieldset a.button.tiny {
+  padding: 5px 7px 5px 7px;
+  margin: 0;
+}

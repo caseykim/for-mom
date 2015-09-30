@@ -1,10 +1,9 @@
 require 'factory_girl'
 
 FactoryGirl.define do
-  factory :user do
-    sequence(:email) {|n| "user#{n}@example.com" }
-    password 'password'
-    password_confirmation 'password'
+  factory :bday_message do
+    sequence(:name) { |n| "Mr./Ms. #{n}" }
+    sequence(:body) { |n| "Happy Birthday!! #{n} time(s)" }
+    password "0000"
   end
-
 end
