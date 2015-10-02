@@ -7,7 +7,6 @@
 </head>
 <body>
   <nav class="top-bar">
-  <img src="/logo.png" class="logo"/>
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">ForMom</a></h1>
@@ -16,8 +15,18 @@
 
     <section class="top-bar-section">
       <ul class="right">
+        <a href="/"><img src="/logo.png" class="logo"/></a>
       </ul>
     </section>
+  </nav>
+  <nav id="gift">
+    <div class="top-bar">
+      <ul>
+        <li><a href="/bday_messages"><i class="fa fa-envelope-o"></i>&nbsp; Messages</a></li>
+        <li><a href="/gifts"><i class="fa fa-birthday-cake"></i>&nbsp; Wishlist</a></li>
+        <li><a href="/photos"><i class="fa fa-picture-o"></i>&nbsp; Photos</a></li>
+      </ul>
+    </div>
   </nav>
 
   <%- flash.each do |key, value| -%>

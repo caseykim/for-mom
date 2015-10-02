@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'gifts#index'
+  root 'homes#index'
   resources :bday_messages
   resources :gifts
 

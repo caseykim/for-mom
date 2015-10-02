@@ -14,11 +14,13 @@
  *= require foundation_and_overrides
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 body {
   font-family: 'Nanum Gothic', serif;
   background: url("/background.jpeg") no-repeat center center fixed;
   background-size: cover;
-  background-color: rgb(233, 219, 198);
 }
 
 .left-room {
@@ -31,47 +33,43 @@ body {
   margin-bottom: 30px;
   position: relative;
   .top-bar {
-    margin-top: 25px;
-    height: 2rem;
+    font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 15px;
+    height: 1.7rem;
     line-height: 2rem;
     background-color: transparent;
-    z-index: -1;
     overflow: hidden;
     ul {
-      padding-left: 50px;
+      padding-right: 30px;
       text-align: right;
     };
     li {
-      font-size: 25px;
       display: inline-block;
       padding-left: 30px;
     };
     a {
-      font-size: 20px;
       color: black;
-      text-decoration: none;
-      font-weight: bolder;
     };
   };
 }
 
 .logo {
-  position: fixed;
-  top: 20px;
-  left: 30px;
-  height: 100px;
-  width: 100px;
+  position: relative;
+  top: 15px;
+  margin-right: 150px;
+  height: 85px;
+  width: 85px;
   display: inline;
 }
 
 .autoscrolling {
-  height: 400px;
+  height: 350px;
   overflow-y: scroll;
 }
 
 .happy-video {
   width: 100%;
-  height: 300px;
+  height: 350px;
 }
 
 .main {
@@ -89,7 +87,16 @@ body {
   width: 100%;
 }
 
+.wish {
+  text-shadow:
+    -1.5px -1.5px 0 #ffffff,
+    1.5px -1.5px 0 #ffffff,
+    -1.5px 1.5px 0 #ffffff,
+	  1.5px 1.5px 0 #ffffff;
+}
+
 .wishlist {
+  max-width: 700px;
   margin: auto;
   table {
     width: 100%;
@@ -112,6 +119,12 @@ body {
   td {
     background-color: rgba(251, 151, 178, 0.63);
   };
+}
+
+.message {
+  background: url("/card.png");
+  background-size: contain;
+  height: 350px;
 }
 
 fieldset {
