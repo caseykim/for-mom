@@ -1,4 +1,4 @@
-$(window).scroll(function() {
+$(function() {
   var lastUrl = window.location.href.lastIndexOf('/');
   var location = window.location.href.substr(lastUrl);
   if (location == '/') {

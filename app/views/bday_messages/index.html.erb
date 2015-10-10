@@ -7,8 +7,8 @@
             <legend><%= message.name %><%= image_tag('/red.png', class: "heart") %></legend>
             <%= message.body %>
             <div class="row">
-              <button data-remote="true" class="tiny secondary button right button-delete-form">Delete (삭제)</button>
-              <button data-remote="true" class="tiny button right button-edit-form">Edit (수정)</button>
+              <!-- <button data-remote="true" class="tiny secondary button right button-delete-form">Delete (삭제)</button>
+              <button data-remote="true" class="tiny button right button-edit-form">Edit (수정)</button> -->
               <div class="small-10 columns right">
                 <div class="hide deleteform">
                   <%= form_for message, method: :delete do |f| %>
