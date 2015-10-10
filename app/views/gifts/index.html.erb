@@ -1,29 +1,11 @@
-<div class="large-8 medium-6 columns">
-  <div class="large-6 columns right">
-    <iframe src="http://www.youtube.com/embed/W-QflnvMR3g?autoplay=1" frameborder="0" allowfullscreen class="happy-video"></iframe>
-    <ul>
-      <% @messages.each do |message| %>
-        <li>
-          <%= message.body %>
-          <%= message.name %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-<div class="large-4 medium-6 columns">
-  <div>
-    <div class="slide-image right">
-      <div id="featured" data-orbit>
-        <img src="004-21.jpg" alt="slide image">
-        <img src="IMG_6252.jpg" alt="slide image">
-      </div>
-    </div>
-  </div>
-  <div>
+<div class="wishlist-container">
+  <div class="row box">
     <div class="wishlist content">
       <table>
-        <caption>Wishlist</caption>
+        <label>
+          Wishlist
+          <i>내가 일년안에 꼭 선물해줄게용~~!!</i>
+        </label>
         <tr>
           <th scope="column">Name</th>
           <th>Price</th>
@@ -53,12 +35,12 @@
             <input name="utf8" type="hidden" value="✓">
             <input type="hidden" name="authenticity_token" value="8Dmhr9guFxIGcVvmtLEokKhYrTcfTktWWu5qYIdR6Lcyb6wVllRgmdHHJHh8EuHDemgpc99KNnjyKPfCvqHpAA==">
             <div class="row collapse">
-              <label>Most-wanted Gift</label>
+              <h5>Most-wanted Gift</h5>
               <div class="small-10 columns">
-                <%= select_tag "id", options_from_collection_for_select(@gifts, "id", "name") %>
+                <%= select_tag "id", options_from_collection_for_select(@gifts, "id", "name"), class: "dropdown" %>
               </div>
               <div class="small-2 columns">
-                <%= submit_tag "❤︎", class: "heart-button postfix"%>
+                <%= submit_tag "❤︎", class: "tiny alert button postfix"%>
               </div>
             </div>
           </form>
