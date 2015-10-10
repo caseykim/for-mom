@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root 'gifts#index'
+  root 'homes#index'
   resources :bday_messages
   resources :gifts
+  resources :photos, only: :index
 
   post '/most-wanted', to: 'gifts#most_wanted'
 end

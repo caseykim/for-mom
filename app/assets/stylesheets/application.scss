@@ -1,4 +1,4 @@
-/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -10,30 +10,136 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require foundation_and_overrides
  *= require_self
+ *= require_tree .
  */
 body {
   font-family: 'Nanum Gothic', serif;
-  background: url("/background.jpeg") no-repeat center center fixed;
-  background-size: cover;
-  background-color: rgb(233, 219, 198);
 }
 
-.happy-video {
+header {
+  background-image: url("/real_pink_roses.jpg");
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+
+  h1 {
+    color: #ffffff;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  }
+}
+
+.fullWidth {
+  padding-top: 20px;
+  background: rgb(240, 229, 212);
   width: 100%;
-  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+.photos {
+  margin: auto;
+  width: 90%;
+  height: 80vh;
+}
+
+.si {
+  width: auto;
+  max-height: 550px;
+}
+.sir {
+  max-width: auto;
+}
+
+.wishlist-container {
+  background-image: url('/wood.png');
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 93vh;
+  padding-top: 10vh;
+}
+
+.video-container {
+  background-image: url('/wood.png');
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+
+  .flex-video {
+    overflow: visible;
+  };
+};
+
+.video {
+  padding-top: 10px;
+}
+
+.message-container {
+  background-image: url('/white.jpg');
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  padding-top: 20px;
+};
+
+.gift-container {
+  background-image: url('/blurred-f.jpg');
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  padding-top: 20px;
+};
+
+h2 {
+  padding-left: 15px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+};
+
+.panel.message {
+  width: 80%;
+  background: rgba(238, 230, 217, 0.86);
+  height: 85vh;
+  border-radius: 15px;
+  overflow: scroll;
+  padding-left: 10px;
+  padding-right: 25px;
+  margin: auto;
+  text-align: center;
+  -webkit-box-shadow: 7px 7px 77px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 7px 77px -8px rgba(0,0,0,0.75);
+  box-shadow: 7px 7px 77px -8px rgba(0,0,0,0.75);
+
+  fieldset {
+    background: rgba(255, 255, 255, 0.5);
+    text-align: justify;
+    padding-top: 5px;
+  };
 }
 
 .main {
   padding-top: 30px;
   margin: auto;
   width: 80%;
-}
-
-.content {
-  padding-top: 30px;
 }
 
 .heart {
@@ -46,10 +152,10 @@ body {
 }
 
 .wishlist {
+  background: rgb(255, 255, 255);
   margin: auto;
   table {
     width: 100%;
-    background: rgba(241, 236, 227, 0.71);
   };
   .button {
     width: 50%;
@@ -57,16 +163,26 @@ body {
   };
 }
 
+.box {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  -webkit-box-shadow: 17px 20px 17px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 17px 20px 17px 0px rgba(0,0,0,0.75);
+  box-shadow: 17px 20px 17px 0px rgba(0,0,0,0.75);
+}
+
 .gift-form {
+  border: 2px solid rgb(255, 255, 255);
   margin: auto;
   align-self: center;
+  margin-top: 50px;
   padding-top: 20px;
   width: 70%;
 }
 
 .most-wanted {
   td {
-    background-color: rgba(251, 151, 178, 0.63);
+    background-color: rgba(228, 161, 179, 0.63);
   };
 }
 
